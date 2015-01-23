@@ -9,8 +9,6 @@ namespace RestackIO.Net
 {
     public class RestackServiceStatus
     {
-        //private string baseUrl = Constants.BaseUrl;
-
         public static string GetStatus()
         {
             try
