@@ -43,8 +43,8 @@ namespace RestackTests
             Restack restack = new Restack(UUID, token);
 
             NameValueCollection nvc = new NameValueCollection();
-            nvc.Add("Temperature", "19");
-            nvc.Add("Humidity", "58");
+            nvc.Add("temperature", "19");
+            nvc.Add("humidity", "58");
 
 
             string response = restack.PostData(nvc);
