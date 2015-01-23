@@ -1,4 +1,4 @@
-# restackio
+# restackio.net
 A .Net wrapper for the RESTACK API - https://restack.io
 
 Add RestackIO.Net to your project using NuGet: <br/>
