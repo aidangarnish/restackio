@@ -18,7 +18,7 @@ string response = restack.PostData("temperature", "16");
 
 
 -----------------------------------------------------------------------------------------
-Date (Method: Post) - Example Usage Multiple Values
+Data (Method: Post) - Example Usage Multiple Values
 
 Restack restack = new Restack(UUID, token); <br/>
 
