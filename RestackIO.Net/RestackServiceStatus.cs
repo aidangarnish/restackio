@@ -13,11 +13,18 @@ namespace RestackIO.Net
 
         public static string GetStatus()
         {
-            using (var wb = new WebClient())
+            try
             {
-                var response = wb.DownloadString(Constants.BaseUrl + "status");
+                using (var wb = new WebClient())
+                {
+                    var response = wb.DownloadString(Constants.BaseUrl + "status");
 
-                return response;
+                    return response;
+                }
+            }
+            catch (WebException ex)
+            {
+                return ex.Message.ToString();
             }
         }
     }

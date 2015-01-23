@@ -33,15 +33,15 @@ namespace RestackIO.Net
 
                 return response;
             }
-        }
+        }      
 
-        public string PostData(string key, string value)
+        public string PostData(string key, object value)
         {
             try
             {
                 string url = baseUrl + "data/";
 
-                if (!String.IsNullOrEmpty(key) && !String.IsNullOrEmpty(value))
+                if (!String.IsNullOrEmpty(key) && value != null)
                 {
                     data = data + key + "=" + value;
 
@@ -61,7 +61,7 @@ namespace RestackIO.Net
                     return "Key and Value cannot be empty";
                 }
             }
-            catch(WebException ex)
+            catch (WebException ex)
             {
                 return ex.Message.ToString();
             }
