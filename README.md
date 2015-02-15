@@ -5,7 +5,7 @@ Add RestackIO.Net to your project using NuGet: <br/>
 PM> Install-Package restackio.net 
 
 -----------------------------------------------------------------------------------------
-Create Device (Method: POST) - Example Usage
+Create Device (Method: POST)
 ```C#
  Restack restack = new Restack(acctKey);
 
@@ -15,7 +15,7 @@ Create Device (Method: POST) - Example Usage
 ```
 
 -----------------------------------------------------------------------------------------
-View Device (Method: Get) - Example Usage 
+View Device (Method: Get)
 
 ```C#
 Restack restack = new Restack(acctKey);
@@ -24,7 +24,7 @@ Device device = restack.GetDevice(deviceId);
 ```
 
 -----------------------------------------------------------------------------------------
-My Devices (Method: Get) - Example Usage
+My Devices (Method: Get)
 ```C#
 Restack restack = new Restack(acctKey);<br/>
 List<Device> devices = restack.GetDevices();
