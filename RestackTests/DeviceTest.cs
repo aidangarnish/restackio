@@ -3,13 +3,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestackIO.Net;
 using RestackIO.Net.Models;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace RestackTests
 {
     [TestClass]
     public class DeviceTest
     {
-        private string acctKey = "c684132b4a8a49178d14214cb6390482";
+        private string acctKey = ConfigurationManager.AppSettings["accountKey"];
 
         [TestMethod]
         public void Get_Devices()
