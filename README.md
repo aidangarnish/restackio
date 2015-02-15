@@ -5,28 +5,28 @@ Add RestackIO.Net to your project using NuGet: <br/>
 PM> Install-Package restackio.net 
 
 -----------------------------------------------------------------------------------------
-Status (Method: GET) - Example Usage
+Create Device (Method: POST) - Example Usage
 
-string response = RestackServiceStatus.GetStatus();
+ Restack restack = new Restack(acctKey);
 
-
------------------------------------------------------------------------------------------
-Data (Method: Post) - Example Usage Single Value
-
-Restack restack = new Restack(UUID, token); <br/>
-string response = restack.PostData("temperature", "16");
+ string name = "Test device";
+ string description = "Description of test device";
+ string response = restack.CreateDevice(name, description, false);
 
 
 -----------------------------------------------------------------------------------------
-Data (Method: Post) - Example Usage Multiple Values
+View Device (Method: Get) - Example Usage 
 
-Restack restack = new Restack(UUID, token); <br/>
+Restack restack = new Restack(acctKey);
+string deviceId = "c031d8bd7bdc48d8992cf58ff39fc43f";
+Device device = restack.GetDevice(deviceId);
 
-NameValueCollection nvc = new NameValueCollection(); <br/>
-nvc.Add("Temperature", "19"); <br/>
-nvc.Add("Humidity", "58"); <br/>
 
-string response = restack.PostData(nvc);
+-----------------------------------------------------------------------------------------
+My Devices (Method: Get) - Example Usage
+
+Restack restack = new Restack(acctKey);
+List<Device> devices = restack.GetDevices();
 
 -----------------------------------------------------------------------------------------
 
