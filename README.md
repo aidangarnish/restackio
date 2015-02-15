@@ -43,3 +43,13 @@ Restack restack = new Restack(acctKey);
 string deviceId = "c031d8bd7bdc48d8992cf58ff39fc43f";
 Device device = restack.GetDevice(deviceId);
 ```
+
+-----------------------------------------------------------------------------------------
+Save Data (POST)
+```C#
+Restack restack = new Restack(acctKey);
+string deviceId = "c031d8bd7bdc48d8992cf58ff39fc43f";
+string stackName = "Temperature";
+restack.SaveData(deviceId, stackName, new Value() { value = new decimal(19.3) });
+```
+
