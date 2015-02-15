@@ -6,13 +6,13 @@ PM> Install-Package restackio.net
 
 -----------------------------------------------------------------------------------------
 Create Device (Method: POST) - Example Usage
-
+'''C#
  Restack restack = new Restack(acctKey);
 
- string name = "Test device";<br/>
- string description = "Description of test device";<br/>
+ string name = "Test device";
+ string description = "Description of test device";
  string response = restack.CreateDevice(name, description, false);
-
+'''
 
 -----------------------------------------------------------------------------------------
 View Device (Method: Get) - Example Usage 
