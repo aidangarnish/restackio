@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestackIO.Net
+namespace RestackIO.Net.Enums
 {
-    public class Constants
+    public enum HttpVerbs
     {
-        public static string BaseUrl = "https://api.restack.io/";
+        Get = 1,
+        Post = 2,
+        Put = 3,
+        Delete = 4
     }
 }

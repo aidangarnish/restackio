@@ -53,12 +53,17 @@
     <Compile Include="GetStatusTests.cs" />
     <Compile Include="PostDataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DeviceTest.cs" />
+    <Compile Include="StackTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RestackIO.Net\RestackIO.Net.csproj">
       <Project>{a2ec214a-8b0a-4441-b8b9-2eef14dcf366}</Project>
       <Name>RestackIO.Net</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

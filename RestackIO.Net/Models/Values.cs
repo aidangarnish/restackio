@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestackIO.Net
+namespace RestackIO.Net.Models
 {
-    public class Constants
+    public class Values
     {
-        public static string BaseUrl = "https://api.restack.io/";
+        public List<Value> values { get; set; }
     }
 }
